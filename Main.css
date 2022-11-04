@@ -1,0 +1,91 @@
+* {
+    box-sizing: border-box;
+}
+:root {
+    --Dark-cyan: hsl(185, 75%, 39%);
+    --Very-dark-desaturated-blue: hsl(229, 23%, 23%);
+    --Dark-grayish-blue: hsl(227, 10%, 46%);
+    --Dark-gray: hsl(0, 0%, 59%);
+    --Main-Border-radius-Size: 20px;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #19a1ad;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Start The Card Form */
+.Card {
+    width: 500px;
+    height: 550px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    border-radius: var(--Main-Border-radius-Size);
+}
+@media (max-width: 660px) {
+    .Card {
+        width: 350px;
+        height: 450px;
+    }
+}
+/* The Start Of The Header */
+.Card .Header {
+    border-top-right-radius: var(--Main-Border-radius-Size);
+    border-top-left-radius: var(--Main-Border-radius-Size);
+    background-image: url(../Images/Background.svg);
+    background-size: cover;
+    flex: 1;
+}
+/* The End Of The Header */
+/* The Start Of The Body */
+.Card .Body {
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid black;
+    align-items: center;
+}
+.Card .Body .Photo {
+    background-color: transparent;
+    position: absolute;
+    left: calc(50% - 50px);
+    top: -26%;
+}
+.Card .Body .Photo img {
+    border-radius: 50%;
+    border: 5px solid white;
+}
+.Card .Body .Text {
+    margin-top: 15px;
+}
+.Card .Body .Text p {
+    text-align: center;
+}
+/* The End Of The Body */
+.Card .Footer {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.Card .Footer .Number {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+@media (max-width: 660px) {
+    .Card .Body .Photo {
+        background-color: transparent;
+        position: absolute;
+        left: calc(50% - 50px);
+        top: -37%;
+    }
+    .Card .Body .Text {
+        margin-top: 20px;
+    }
+}
+/* End The Card Form */
